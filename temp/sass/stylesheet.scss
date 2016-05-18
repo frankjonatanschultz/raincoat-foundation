@@ -1,0 +1,140 @@
+@import "compass/css3";
+@import "mixins";
+@import "normalize";
+@import "typography";
+
+*,*:before,*:after {
+  @include box-sizing(border-box);
+}
+
+html,body {
+  height: 100%;
+}
+
+body {
+  background: url('../images/bg.jpg') 50% 50% no-repeat #2dcced;
+  background-size: cover;
+}
+
+
+.wrapper {
+  position: relative;
+  top: 50%;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include transform( translateY(-50%) );
+  background: #ffb400;
+  @include clearfix;
+}
+
+header {
+  position: relative;
+  float: left;
+  width: 56%;
+  height: 377px;
+  margin: 18px 0 22px 2%;
+  background: url('../images/logo.jpg?v=2') 0 100% no-repeat;
+  background-size: contain;
+  &:before,&:after {
+    display: block; 
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 3px;
+    background: #000;
+  }
+  &:before {
+    top: -18px;
+  }
+  &:after {
+    bottom: -22px;
+  }
+}
+
+
+.temp-content {
+  position: relative;
+  float: left;
+  width: 38.3%;
+  min-height: 417px;
+  margin: 0 1.85%;
+  padding: 30px 0 100px;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  p {
+    letter-spacing: -0.3px;
+  }
+}
+
+.contact {
+  position: absolute;
+  right: -10px;
+  left: -10px;
+  bottom: 0;
+  @include clearfix;
+  font-size: 13px;
+  .vcard {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 14px 10px 40px;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 10px;
+      left: 10px;
+      border-top: 1px solid #000;
+    }
+  }
+}
+
+
+@media all and (max-width:1240px) {
+  .wrapper {
+    margin: 0 20px;
+  }
+}
+
+@media all and (max-width: 920px) {
+  
+  header, .temp-content {
+    float: none;
+    width: auto;
+  }
+  header {
+    float: none;
+    width: auto;
+    height: 0;
+    margin: 18px 15px 22px;
+    padding-bottom: 30%;
+  }
+  .temp-content {
+    min-height: 0;
+    margin: 0 15px;
+    padding: 30px 0 0;
+    border-top: 0;
+  }
+  .contact {
+    position: relative;
+    right: auto;
+    left: auto;
+    margin: 40px -10px 0;
+  }
+  
+}
+
+@media all and (max-width: 479px) {
+  
+  header {
+    height: 140px;
+  }
+  .contact .vcard {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  
+}
