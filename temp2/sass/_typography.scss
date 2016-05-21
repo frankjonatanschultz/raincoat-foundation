@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'twine-bolditalic';
+    src: url('../fonts/wilton_foundry_-_twine_bold_italic-webfont.woff2') format('woff2'),
+         url('../fonts/wilton_foundry_-_twine_bold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'twine-bold';
+    src: url('../fonts/wilton_foundry_-_twine_bold-webfont.woff2') format('woff2'),
+         url('../fonts/wilton_foundry_-_twine_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'twine-italic';
+    src: url('../fonts/wilton_foundry_-_twine_italic-webfont.woff2') format('woff2'),
+         url('../fonts/wilton_foundry_-_twine_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'twine-regular';
+    src: url('../fonts/wilton_foundry_-_twine-webfont.woff2') format('woff2'),
+         url('../fonts/wilton_foundry_-_twine-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: 'twine-regular';
+	font-size: 15px;
+	line-height: 1.2;
+}
+
+*, *:before, *:after {
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: none;
+	font-weight: 100;
+}
+
+b,strong {
+  font-family: 'twine-bold';
+}
+i,em {
+  font-family: 'twine-italic';
+}
+i b, i strong,
+b i, strong i {
+  font-family: 'twine-bolditalic';
+}
+
+
+p {
+	margin: 0;
+	padding: 0 0 1em;
+	&:empty {
+		display: none;
+	}
+}
+
+
+h1,h2,h3 {
+  font-family: 'twine-bold';
+  i,em {
+    font-family: 'twine-bolditalic';
+  }
+}
+
+h1,h2,h3,h4 {
+  line-height: 1.1;
+	margin: 0;
+	padding: 0 0 0.5em;
+}
+
+h1 {
+	font-size: 50px;
+}
+h2 {
+  font-size: 42px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 20px;
+	line-height: 1.25;
+	padding: 0 0 5px;
+}
+
+@media all and (max-width:768px) {
+
+  h1 {
+  	font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+  	font-size: 22px;
+  }
+  h4 {
+  	font-size: 18px;
+  }
+  
+}
+
+
+a { 
+	text-decoration: none;
+	color: inherit;
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+	&:hover {
+  	border-bottom: 1px solid rgba(0,0,0,0.8);
+	}
+}
+
+
+
+.small { font-size: 14px; }
+.large { font-size: 22px; }
+.caps { text-transform: uppercase; }
+
+
+.alignCenter {
+	text-align: center;
+}
+.alignLeft {
+	text-align: left;
+}
+.alignRight {
+	text-align: right;
+}
+
+.yellow {
+  color: #ffcd00;
+}
+

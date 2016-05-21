@@ -1,0 +1,173 @@
+@import "compass/css3";
+@import "mixins";
+@import "normalize";
+@import "typography";
+
+*,*:before,*:after {
+  @include box-sizing(border-box);
+}
+
+html,body {
+  height: 100%;
+}
+
+body {
+  background: url('../images/bg.jpg') 50% 50% no-repeat #f2f7ee;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.yellow-bg {
+  background: #ffb400;
+}
+.dark-bg {
+  background: rgba(0,0,0, 0.88);
+  color: #64deff;
+  .col-left, .col-right {
+    border-color: #64deff;
+  }
+}
+.blue-bg {
+  background: #00c8ff;
+  color: #22859f;
+}
+.col-left, .col-right {
+  float: left;
+  margin: 0 1%;
+  padding: 15px 0;
+  border-top: 2px solid #000;
+}
+.col-left {
+  width: 58%;
+}
+.col-right {
+  width: 38%;
+}
+
+header,main,footer {
+  @include clearfix;
+  padding: 0 15px;
+}
+
+.wrapper > header {
+  .col-left, .col-right {
+    height: 276px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+  }
+  .col-left {
+    padding: 0;
+  }
+  .col-right {
+    padding-top: 28px;
+  }
+  h1 {
+    margin-left: -14px;
+    padding: 0;
+  }
+}
+
+main {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer {
+  margin-top: 4px;
+  font-size: 13px;
+  .col-left, .col-right {
+    border: 0;
+    padding: 0 0 30px;
+    > div {
+      padding-top: 12px;
+      border-top: 2px solid #22859f;
+    }
+  }
+  a {
+    border: 0 !important;
+  }
+  .vcard {
+    display: inline-block;
+    min-width: 245px;
+    margin-right: 20px;
+  }
+}
+
+@media all and (max-width:1240px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+  .col-left {
+    width: 52%;
+  }
+  .col-right {
+    width: 44%;
+  }
+  footer .vcard {
+    min-width: 218px;
+  }
+}
+
+@media all and (max-width:1024px) {
+  .wrapper {
+    max-width: 768px;
+  }
+  
+  .wrapper > header {
+    .col-left, .col-right {
+      height: 325px;
+    }
+    h1 {
+      margin-top: 57px;
+    }
+  }
+  
+  footer .vcard {
+    min-width: 170px;
+  }
+}
+
+@media all and (max-width:768px) {
+  .wrapper {
+    max-width: 480px;
+    .col-left, .col-right {
+      width: 98%;
+    }
+  }
+  
+  .wrapper > header {
+    .col-left, .col-right {
+      height: auto;
+    }
+    .col-left {
+      border-bottom: 0;
+    }
+    .col-right {
+      border-top: 0;
+      padding-top: 0;
+    }
+    h1 {
+      margin-top: 0;
+    }
+  }
+  
+  .wrapper > footer {
+    .col-left, .col-right {
+      padding: 0;
+      > div {
+        margin-bottom: 20px;
+      }
+    }
+    .vcard {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
