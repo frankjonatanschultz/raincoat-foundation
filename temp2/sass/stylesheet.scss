@@ -27,6 +27,7 @@ body {
   background: #ffb400;
 }
 .dark-bg {
+  background: #000;
   background: rgba(0,0,0, 0.88);
   color: #64deff;
   .col-left, .col-right {
@@ -50,7 +51,7 @@ body {
   width: 38%;
 }
 
-header,main,footer {
+header,.main,footer {
   @include clearfix;
   padding: 0 15px;
 }
@@ -73,7 +74,7 @@ header,main,footer {
   }
 }
 
-main {
+.main {
   position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
